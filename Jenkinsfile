@@ -7,11 +7,6 @@ pipeline {
 
   }
   stages {
-    stage('Intialize') {
-      steps {
-        sh 'echo "Intialize"'
-      }
-    }
     stage('Build') {
       steps {
         sh '''echo PATH = ${PATH}
