@@ -12,12 +12,15 @@ pipeline {
         sh 'echo "Intialize"'
       }
     }
+
     stage('Build') {
       steps {
         sh '''echo PATH = ${PATH}
 echo M2_HOME = ${M2_HOME}
-mvn clean'''
+mvn clean
+docker -v'''
       }
     }
+
   }
 }
